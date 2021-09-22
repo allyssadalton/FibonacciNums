@@ -10,7 +10,7 @@ f1=1
 es=" "
 
 #asks how many Fibonacci numbers are wanted
-aot=int(input("How many Fibonacci numbers would you like?"))
+aot=int(input("How many Fibonacci numbers would you like? "))
 aot=int(aot/2)
 
 #for loop
