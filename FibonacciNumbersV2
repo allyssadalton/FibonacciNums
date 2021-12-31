@@ -1,0 +1,55 @@
+#Allyssa  Dalton
+#Fibonacci Numbers 2
+
+from time import sleep 
+print("Hello, welcome to Fibonacci Numbers v2. Just type a number and we will tell you if is part of the Fibonacci sequence.")
+
+#asks the user for the number of their choice
+#try + except for the input
+try:
+    num=int(input("Enter your number: "))
+    aot=int(num/2) #so the for loop doen't run longer than needed
+
+#adds what needed
+    fn=0
+    f1=1        
+    el=[fn,f1]
+    for x in range(aot):
+        fn=fn+f1
+        el.append(fn)
+        f1=f1+fn
+        el.append(f1)
+        
+    #to get correct amount of Fibonacci numbers for yn output
+    if num%2!=0:
+        z=num+1
+    if num%2==0:
+        z=num+2
+        
+except ValueError:
+    print("You must type a positive whole number.")
+    
+#try + except for not being part of the Fibonacci Sequence
+try:
+    y=el.index(num)
+    print(f"{num} is part of the Fibonacci Sequence.")
+
+except ValueError:
+    print(f"{num} is not part of the Fibonacci Sequence.")
+    
+#prints the sequence
+sleep(1)
+print(f"The first {z} Fibonacci numbers will appear in approximately 2 seconds.")
+sleep(1)
+print(el)
+    
+'''
+Variable Values
+num = the number in question
+aot = number of times the for loop will run
+el = the Fibonacci Sequence list
+fn = every even number index in the Fibonacci Sequence
+f1 = every odd number index in the Fibonacci Sequence
+z = amouont of Fibonacci numbers that will be in the list
+y = index for the number in question (num)
+'''
