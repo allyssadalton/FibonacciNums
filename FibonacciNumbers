@@ -6,7 +6,7 @@ Fibonacci Numbers
 
 #creates needed variables
 fn=0
-f1=1 
+f1=1  
 es=" "
 
 #asks how many Fibonacci numbers are wanted
